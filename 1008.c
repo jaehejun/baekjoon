@@ -24,12 +24,22 @@
 
 int	main(void)
 {
-	int	a;
-	int	b;
+	double	a;
+	double	b;
 
-	scanf("%d %d", &a, &b);
+	scanf("%lf %lf", &a, &b);
 	if (a == 0 || b == 0)
 		return (0);
-	printf("%f", (double)a / (double)b);
+	printf("%0.9lf", a / b);
 	return (0);
 }
+
+/*
+float의 정밀도는 소수점 이하 7자리
+double의 정밀도는 소수점 이하 15자리
+double 형의 정밀도를 계산하고 출력하기 위해서 scanf("%lf %lf", &a, &b);로 입력받아야 한다.
+마찬가지로 출력도 printf("%.9lf", a / b);로 출력해야 한다.
+.9 는 소수점 이하 9자리까지 출력하라는 의미이다.
+lf는 long float의 약자이며 double형을 출력할 수 있다.
+. 앞에 숫자 n을 넣으면 최소 n개의 문자가 출력되도록 보장한다는 의미이다.
+*/
