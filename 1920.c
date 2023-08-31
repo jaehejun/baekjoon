@@ -8,6 +8,7 @@
 정수는 INT_MIN ~ INT_MAX
 */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
